@@ -16,23 +16,17 @@ import {
 
 const services = [
   {
-    icon: <Fire size={24} weight="duotone" />,
-    title: "Fire Resistant & Fire Protection Painting",
+    icon: <Fire size={24} weight="duotone" className="text-red-500" />,
+    iconBg: "bg-red-500/10",
+    title: "Epoxy Fire Resistant & Fire Protection Painting",
     description:
-      "Comprehensive fire protection services including fire-resistant applications, specialized coatings, and complete protection systems.",
+      "Comprehensive fire protection services including fire-resistant applications, specialized coatings, and protective coating.",
     link: "/services#fire-protection",
     image: "/metal-frame.jpeg",
   },
   {
-    icon: <Truck size={24} weight="duotone" />,
-    title: "Vehicles & Machinery",
-    description:
-      "Complete vehicle and construction machinery services including maintenance, repairs, sales, and imports.",
-    link: "/services#vehicles",
-    image: "https://images.unsplash.com/photo-1580901368919-7738efb0f87e?w=600&q=80",
-  },
-  {
-    icon: <Buildings size={24} weight="duotone" />,
+    icon: <Buildings size={24} weight="duotone" className="text-amber-600" />,
+    iconBg: "bg-amber-600/10",
     title: "Construction & Maintenance",
     description:
       "Residential and commercial construction, warehouse building, renovations, and building maintenance.",
@@ -40,7 +34,17 @@ const services = [
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80",
   },
   {
-    icon: <Lightning size={24} weight="duotone" />,
+    icon: <Truck size={24} weight="duotone" className="text-blue-500" />,
+    iconBg: "bg-blue-500/10",
+    title: "Vehicles & Machinery",
+    description:
+      "Complete vehicle and construction machinery services including maintenance, repairs, sales, and imports.",
+    link: "/services#vehicles",
+    image: "/vehicles.jpg",
+  },
+  {
+    icon: <Lightning size={24} weight="duotone" className="text-yellow-500" />,
+    iconBg: "bg-yellow-500/10",
     title: "Electrical Installations",
     description:
       "Complete electrical solutions, fault diagnosis, system upgrades, and full certification.",
@@ -77,7 +81,7 @@ export function ServicesPreview() {
                   />
 
                   {/* Icon */}
-                  <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-background/90 backdrop-blur-sm flex items-center justify-center text-primary">
+                  <div className={`absolute top-4 left-4 w-12 h-12 rounded-xl ${service.iconBg} backdrop-blur-sm flex items-center justify-center`}>
                     {service.icon}
                   </div>
                 </div>

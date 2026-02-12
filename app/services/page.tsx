@@ -44,124 +44,171 @@ import {
   Wall,
   ListChecks,
   FireExtinguisher,
+  Drop,
+  Circle,
 } from "@phosphor-icons/react";
 
 const services = [
   {
     id: "fire-protection",
-    icon: <Fire size={32} weight="duotone" />,
-    title: "Fire Resistant & Fire Protection Painting",
+    icon: <Fire size={32} weight="duotone" className="text-red-500" />,
+    iconBg: "bg-red-500/15",
+    iconColor: "text-red-500",
+    title: "Epoxy Fire Resistant & Fire Protection Painting",
     description:
-      "Comprehensive fire protection services including fire-resistant applications, specialized coatings, and complete protection systems for warehouses, factories, and industrial facilities.",
+      "Comprehensive fire protection services including fire-resistant applications, specialized coatings, and protective coating for warehouses, factories, and industrial facilities.",
     image: "/metal-frame.jpeg",
     features: [
       {
-        icon: <Wall size={20} />,
+        icon: <Wall size={20} className="text-red-500" />,
         title: "Fire-Resistant Applications",
         description: "Specialized materials and protective coatings",
       },
       {
-        icon: <PaintBrush size={20} />,
+        icon: <PaintBrush size={20} className="text-red-500" />,
         title: "Fire-Resistant Paints",
         description: "Intumescent and fireproof coating systems",
       },
       {
-        icon: <ShieldCheck size={20} />,
+        icon: <ShieldCheck size={20} className="text-red-500" />,
         title: "Active Protection",
         description: "Sprinklers, alarms, and suppression systems",
       },
       {
-        icon: <FireExtinguisher size={20} />,
+        icon: <FireExtinguisher size={20} className="text-red-500" />,
         title: "Passive Protection",
         description: "Fire barriers, compartmentalization, and seals",
       },
       {
-        icon: <Certificate size={20} />,
+        icon: <Certificate size={20} className="text-red-500" />,
         title: "Certifications",
         description: "Full technical documentation and compliance",
       },
       {
-        icon: <Factory size={20} />,
+        icon: <Factory size={20} className="text-red-500" />,
         title: "Industrial Applications",
         description: "Warehouses, factories, and storage facilities",
       },
     ],
   },
   {
-    id: "vehicles",
-    icon: <Truck size={32} weight="duotone" />,
-    title: "Vehicles & Machinery",
+    id: "epoxy-products",
+    icon: <Drop size={32} weight="duotone" className="text-red-600" />,
+    iconBg: "bg-red-600/15",
+    iconColor: "text-red-600",
+    title: "Epoxy Products",
     description:
-      "Complete vehicle and construction machinery services including maintenance, repairs, sales, imports, and pre-purchase technical inspections.",
-    image: "https://images.unsplash.com/photo-1580901368919-7738efb0f87e?w=800&q=80",
+      "Premium epoxy solutions including industrial coatings, resin systems, and specialized flooring applications for demanding commercial and industrial environments.",
+    image: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80",
     features: [
       {
-        icon: <Wrench size={20} />,
-        title: "Maintenance & Repair",
-        description: "All types of vehicles and construction machinery",
+        icon: <PaintBrush size={20} className="text-red-600" />,
+        title: "Epoxy Coatings",
+        description: "High-performance protective coatings for floors and surfaces",
       },
       {
-        icon: <ShoppingCart size={20} />,
-        title: "Sales & Imports",
-        description: "Professional vehicles and machinery on order",
+        icon: <Circle size={20} className="text-red-600" />,
+        title: "Resin Systems",
+        description: "Industrial-grade epoxy resins for various applications",
       },
       {
-        icon: <MagnifyingGlass size={20} />,
-        title: "Technical Inspection",
-        description: "Pre-purchase inspections and assessments",
+        icon: <Factory size={20} className="text-red-600" />,
+        title: "Industrial Flooring",
+        description: "Durable epoxy flooring for warehouses and factories",
+      },
+      {
+        icon: <ShieldCheck size={20} className="text-red-600" />,
+        title: "Chemical Resistance",
+        description: "Protective solutions against chemicals and abrasion",
+      },
+      {
+        icon: <Certificate size={20} className="text-red-600" />,
+        title: "Quality Assurance",
+        description: "Certified products meeting industry standards",
       },
     ],
   },
   {
     id: "construction",
-    icon: <Buildings size={32} weight="duotone" />,
+    icon: <Buildings size={32} weight="duotone" className="text-amber-600" />,
+    iconBg: "bg-amber-600/15",
+    iconColor: "text-amber-600",
     title: "Construction & Maintenance",
     description:
       "Comprehensive construction services from residential homes to commercial facilities, including renovations and ongoing maintenance.",
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80",
     features: [
       {
-        icon: <House size={20} />,
+        icon: <House size={20} className="text-amber-600" />,
         title: "Residential Construction",
         description: "Custom homes and housing projects",
       },
       {
-        icon: <Warehouse size={20} />,
+        icon: <Warehouse size={20} className="text-amber-600" />,
         title: "Commercial Buildings",
         description: "Warehouses and business facilities",
       },
       {
-        icon: <HardHat size={20} />,
+        icon: <HardHat size={20} className="text-amber-600" />,
         title: "Renovations",
         description: "Building upgrades and maintenance",
       },
     ],
   },
   {
+    id: "vehicles",
+    icon: <Truck size={32} weight="duotone" className="text-blue-500" />,
+    iconBg: "bg-blue-500/15",
+    iconColor: "text-blue-500",
+    title: "Vehicles & Machinery",
+    description:
+      "Complete vehicle and construction machinery services including maintenance, repairs, sales, imports, and pre-purchase technical inspections.",
+    image: "/vehicles.jpg",
+    features: [
+      {
+        icon: <Wrench size={20} className="text-blue-500" />,
+        title: "Maintenance & Repair",
+        description: "All types of vehicles and construction machinery",
+      },
+      {
+        icon: <ShoppingCart size={20} className="text-blue-500" />,
+        title: "Sales & Imports",
+        description: "Professional vehicles and machinery on order",
+      },
+      {
+        icon: <MagnifyingGlass size={20} className="text-blue-500" />,
+        title: "Technical Inspection",
+        description: "Pre-purchase inspections and assessments",
+      },
+    ],
+  },
+  {
     id: "electrical",
-    icon: <Lightning size={32} weight="duotone" />,
+    icon: <Lightning size={32} weight="duotone" className="text-yellow-500" />,
+    iconBg: "bg-yellow-500/15",
+    iconColor: "text-yellow-500",
     title: "Electrical Installations",
     description:
       "Complete electrical solutions from new installations to fault diagnosis and system upgrades for residential, commercial, and industrial facilities.",
     image: "/electrical-install.jpg",
     features: [
       {
-        icon: <Plug size={20} />,
+        icon: <Plug size={20} className="text-yellow-500" />,
         title: "New Installations",
         description: "Complete wiring and electrical panel systems",
       },
       {
-        icon: <LightbulbFilament size={20} />,
+        icon: <LightbulbFilament size={20} className="text-yellow-500" />,
         title: "Fault Diagnosis",
         description: "Detection and repair of electrical faults",
       },
       {
-        icon: <Gear size={20} />,
+        icon: <Gear size={20} className="text-yellow-500" />,
         title: "System Upgrades",
         description: "Modernization and capacity improvements",
       },
       {
-        icon: <Certificate size={20} />,
+        icon: <Certificate size={20} className="text-yellow-500" />,
         title: "Compliance",
         description: "Full certification and documentation",
       },
@@ -169,44 +216,46 @@ const services = [
   },
   {
     id: "consulting",
-    icon: <ChartLineUp size={32} weight="duotone" />,
+    icon: <ChartLineUp size={32} weight="duotone" className="text-emerald-500" />,
+    iconBg: "bg-emerald-500/15",
+    iconColor: "text-emerald-500",
     title: "Technical Consulting",
     description:
       "Expert consulting services including techno-economic studies, project management, cost-benefit analysis, and investment advisory.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
     features: [
       {
-        icon: <Lightbulb size={20} />,
+        icon: <Lightbulb size={20} className="text-emerald-500" />,
         title: "Technical Solutions",
         description: "Customized project recommendations",
       },
       {
-        icon: <Calculator size={20} />,
+        icon: <Calculator size={20} className="text-emerald-500" />,
         title: "Project Costing",
         description: "Accurate budgeting and estimates",
       },
       {
-        icon: <UsersThree size={20} />,
+        icon: <UsersThree size={20} className="text-emerald-500" />,
         title: "Supervision",
         description: "Work coordination and oversight",
       },
       {
-        icon: <FileText size={20} />,
+        icon: <FileText size={20} className="text-emerald-500" />,
         title: "Techno-Economic Studies",
         description: "Comprehensive project analysis",
       },
       {
-        icon: <Scales size={20} />,
+        icon: <Scales size={20} className="text-emerald-500" />,
         title: "Cost-Benefit Analysis",
         description: "Investment ROI evaluation",
       },
       {
-        icon: <Gear size={20} />,
+        icon: <Gear size={20} className="text-emerald-500" />,
         title: "Equipment Selection",
         description: "Optimal machinery recommendations",
       },
       {
-        icon: <Handshake size={20} />,
+        icon: <Handshake size={20} className="text-emerald-500" />,
         title: "Investment Advisory",
         description: "Strategic technical guidance",
       },
@@ -218,14 +267,20 @@ const additionalServices = [
   {
     title: "Import-Export Materials",
     description: "Building materials, industrial products, and special orders",
+    icon: <CheckCircle size={24} weight="fill" />,
+    iconBg: "bg-primary/10",
   },
   {
     title: "Project Management",
     description: "End-to-end project coordination and delivery",
+    icon: <CheckCircle size={24} weight="fill" />,
+    iconBg: "bg-primary/10",
   },
   {
     title: "Emergency Services",
     description: "Rapid response for urgent technical issues",
+    icon: <CheckCircle size={24} weight="fill" />,
+    iconBg: "bg-primary/10",
   },
 ];
 
@@ -279,80 +334,116 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Sections */}
-        {services.map((service, index) => (
-          <Section
-            key={service.id}
-            id={service.id}
-            className={index % 2 === 0 ? "" : "bg-muted/30"}
-          >
-            <div
-              className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
-                index % 2 !== 0 ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Image - alternating sides */}
-              <FadeIn
-                direction={index % 2 === 0 ? "left" : "right"}
-                className={index % 2 !== 0 ? "lg:order-2" : ""}
-              >
-                <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <BorderBeam size={300} duration={15} />
-                </div>
-              </FadeIn>
+        {services
+          .filter((service) => service.id !== "epoxy-products")
+          .map((service, visualIndex) => {
+            const epoxyProducts = services.find((s) => s.id === "epoxy-products");
+            const isFireProtection = service.id === "fire-protection";
 
-              {/* Content */}
-              <FadeIn
-                direction={index % 2 === 0 ? "right" : "left"}
-                className={index % 2 !== 0 ? "lg:order-1" : ""}
+            return (
+              <Section
+                key={service.id}
+                id={service.id}
+                className={visualIndex % 2 === 0 ? "" : "bg-muted/30"}
               >
-                <div className="space-y-6">
-                  <div className="w-16 h-16 rounded-2xl bg-primary/15 flex items-center justify-center text-primary">
-                    {service.icon}
-                  </div>
-                  <h2 className="text-3xl md:text-4xl font-bold">
-                    {service.title}
-                  </h2>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    {service.description}
-                  </p>
+                {/* Standard layout with image for other services */}
+                <div
+                  className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
+                    visualIndex % 2 !== 0 ? "lg:flex-row-reverse" : ""
+                  }`}
+                >
+                  {/* Image - alternating sides */}
+                  <FadeIn
+                    direction={visualIndex % 2 === 0 ? "left" : "right"}
+                    className={visualIndex % 2 !== 0 ? "lg:order-2" : ""}
+                  >
+                    <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover"
+                      />
+                      <BorderBeam size={300} duration={15} />
+                    </div>
+                  </FadeIn>
 
-                  {/* Features list */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <div
-                        key={featureIndex}
-                        className="flex items-start gap-3 p-3 rounded-lg bg-muted/50"
-                      >
-                        <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
-                          {feature.icon}
+                  {/* Content */}
+                  <FadeIn
+                    direction={visualIndex % 2 === 0 ? "right" : "left"}
+                    className={visualIndex % 2 !== 0 ? "lg:order-1" : ""}
+                  >
+                  <div className="space-y-6">
+                    <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center`}>
+                      {service.icon}
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold">
+                      {service.title}
+                    </h2>
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    {/* Features list */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4">
+                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                        <div
+                          key={featureIndex}
+                          className="flex items-start gap-3 p-3 rounded-lg bg-muted/50"
+                        >
+                          <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                            {feature.icon}
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-medium">{feature.title}</h4>
+                            <p className="text-xs text-muted-foreground">
+                              {feature.description}
+                            </p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="text-sm font-medium">{feature.title}</h4>
-                          <p className="text-xs text-muted-foreground">
-                            {feature.description}
-                          </p>
+                      ))}
+                    </div>
+
+                    {/* Integrated Epoxy Products subsection for Fire Protection */}
+                    {isFireProtection && epoxyProducts && (
+                      <div className="pt-6 mt-6 border-t border-border">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className={`w-10 h-10 rounded-xl ${epoxyProducts.iconBg} flex items-center justify-center`}>
+                            {epoxyProducts.icon}
+                          </div>
+                          <h3 className="text-xl font-semibold">{epoxyProducts.title}</h3>
+                        </div>
+                        <p className="text-sm text-muted-foreground mb-4">
+                          {epoxyProducts.description}
+                        </p>
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                          {epoxyProducts.features.slice(0, 5).map((feature, featureIndex) => (
+                            <div
+                              key={featureIndex}
+                              className="flex items-center gap-2 p-2 rounded-md bg-muted/30"
+                            >
+                              <div className="w-5 h-5 rounded-md bg-muted flex items-center justify-center flex-shrink-0">
+                                {feature.icon}
+                              </div>
+                              <h4 className="text-xs font-medium">{feature.title}</h4>
+                            </div>
+                          ))}
                         </div>
                       </div>
-                    ))}
-                  </div>
+                    )}
 
-                  <Button asChild className="mt-4">
-                    <Link href="/contact">
-                      Request Quote
-                      <ArrowRight size={16} className="ml-2" />
-                    </Link>
-                  </Button>
-                </div>
-              </FadeIn>
-            </div>
-          </Section>
-        ))}
+                    <Button asChild className="mt-4">
+                      <Link href="/contact">
+                        Request Quote
+                        <ArrowRight size={16} className="ml-2" />
+                      </Link>
+                    </Button>
+                  </div>
+                </FadeIn>
+              </div>
+            </Section>
+          );
+        })}
 
         {/* Additional Services */}
         <Section className="bg-muted/30">
@@ -372,8 +463,8 @@ export default function ServicesPage() {
                   containerClassName="h-full"
                 >
                   <div className="text-center">
-                    <div className="w-12 h-12 mx-auto rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
-                      <CheckCircle size={24} weight="fill" />
+                    <div className={`w-12 h-12 mx-auto rounded-full ${service.iconBg} flex items-center justify-center mb-4`}>
+                      {service.icon}
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
                     <p className="text-sm text-muted-foreground">

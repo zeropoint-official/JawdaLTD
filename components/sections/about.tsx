@@ -21,8 +21,8 @@ export function About() {
         <FadeIn direction="left">
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
-              alt="Professional engineering team"
+              src="/about-us.jpg"
+              alt="Professional team collaborating"
               fill
               className="object-cover"
             />

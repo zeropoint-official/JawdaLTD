@@ -52,7 +52,7 @@ export function Hero() {
           >
             <FlipWords words={words} className="text-primary" />
             <br />
-            <span className="text-foreground">Technical Solutions</span>
+            <span className="text-foreground">Industrial Solutions</span>
           </motion.h1>
 
           {/* Description */}
@@ -62,8 +62,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Complete technical solutions for mechanical, electrical, construction,
-            and consulting services tailored to your project needs.
+            Fire protection, construction, electrical installations, and technical consulting 
+            for warehouses, factories, and industrial facilities.
           </motion.p>
 
           {/* CTA Buttons */}

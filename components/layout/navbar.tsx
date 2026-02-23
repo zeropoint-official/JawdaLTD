@@ -21,7 +21,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <nav className="container mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <Image src="/logo-copy.png" alt="Jawda LTD" width={220} height={80} className="h-16 w-auto" />
+          <Image src="/logov2.png" alt="Jawda LTD" width={220} height={80} className="h-16 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

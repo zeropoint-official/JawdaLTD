@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Spotlight } from "@/components/ui/spotlight";
@@ -12,17 +11,20 @@ export function Hero() {
   const words = ["Reliable", "Efficient", "Professional", "Innovative"];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Background Image */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black">
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
-        <Image
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
-          alt="Industrial construction site"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/95 via-background/80 to-background" />
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/video-backround.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60" />
       </div>
 
       {/* Spotlight Effect */}
@@ -33,10 +35,10 @@ export function Hero() {
 
       {/* Grid pattern */}
       <div
-        className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none opacity-[0.02]"
+        className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none opacity-[0.03]"
         style={{
-          backgroundImage: `linear-gradient(to right, currentColor 1px, transparent 1px),
-                           linear-gradient(to bottom, currentColor 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.3) 1px, transparent 1px),
+                           linear-gradient(to bottom, rgba(255,255,255,0.3) 1px, transparent 1px)`,
         }}
       />
 
@@ -52,7 +54,7 @@ export function Hero() {
           >
             <FlipWords words={words} className="text-primary" />
             <br />
-            <span className="text-foreground">Industrial Solutions</span>
+            <span className="text-white">Industrial Solutions</span>
           </motion.h1>
 
           {/* Description */}
@@ -60,7 +62,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
+            className="mt-6 text-lg md:text-xl text-white/70 max-w-2xl mx-auto"
           >
             Fire protection, construction, electrical installations, and technical consulting 
             for warehouses, factories, and industrial facilities.
@@ -83,7 +85,7 @@ export function Hero() {
               asChild
               variant="outline"
               size="lg"
-              className="text-base px-8 backdrop-blur-sm"
+              className="text-base px-8 backdrop-blur-sm border-white/20 text-white hover:bg-white/10"
             >
               <Link href="/services">
                 <Play size={18} className="mr-2" weight="fill" />
@@ -104,9 +106,9 @@ export function Hero() {
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex items-start justify-center p-2"
+          className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2"
         >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-muted-foreground/50" />
+          <motion.div className="w-1.5 h-1.5 rounded-full bg-white/50" />
         </motion.div>
       </motion.div>
     </section>

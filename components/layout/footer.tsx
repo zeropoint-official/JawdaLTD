@@ -27,7 +27,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center">
-              <Image src="/logo-copy.png" alt="Jawda LTD" width={180} height={60} className="h-12 w-auto brightness-0 invert" />
+              <Image src="/logov2.png" alt="Jawda LTD" width={180} height={60} className="h-12 w-auto brightness-0 invert" />
             </Link>
             <p className="text-sm text-background/70 leading-relaxed">
               Complete Technical Solutions. Reliable, efficient, and

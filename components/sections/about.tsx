@@ -27,19 +27,6 @@ export function About() {
               className="object-cover"
             />
             <BorderBeam size={300} duration={15} />
-            {/* Overlay gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
-            {/* Stats overlay */}
-            <div className="absolute bottom-4 left-4 right-4 flex gap-4">
-              <div className="flex-1 backdrop-blur-md bg-background/80 rounded-xl p-4 border border-border">
-                <div className="text-2xl font-bold text-primary">15+</div>
-                <div className="text-xs text-muted-foreground">Years Experience</div>
-              </div>
-              <div className="flex-1 backdrop-blur-md bg-background/80 rounded-xl p-4 border border-border">
-                <div className="text-2xl font-bold text-primary">500+</div>
-                <div className="text-xs text-muted-foreground">Projects Done</div>
-              </div>
-            </div>
           </div>
         </FadeIn>
 

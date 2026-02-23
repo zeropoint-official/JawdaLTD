@@ -18,9 +18,9 @@ const services = [
   {
     icon: <Fire size={24} weight="duotone" className="text-red-500" />,
     iconBg: "bg-red-500/10",
-    title: "Epoxy Fire Resistant & Fire Protection Painting",
+    title: "Fire Protection Painting & Epoxy Products",
     description:
-      "Comprehensive fire protection services including fire-resistant applications, specialized coatings, and protective coating.",
+      "Premium epoxy coatings, fire-resistant applications, specialized protective coatings, and industrial flooring solutions for demanding environments.",
     link: "/services#fire-protection",
     image: "/metal-frame.jpeg",
   },

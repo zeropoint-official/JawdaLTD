@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -9,16 +10,41 @@ import { ArrowRight, Play } from "@phosphor-icons/react";
 
 export function Hero() {
   const words = ["Reliable", "Efficient", "Professional", "Innovative"];
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const tryPlay = () => {
+      video.play().catch(() => {});
+    };
+
+    tryPlay();
+
+    document.addEventListener("touchstart", tryPlay, { once: true });
+    document.addEventListener("click", tryPlay, { once: true });
+    document.addEventListener("scroll", tryPlay, { once: true });
+
+    return () => {
+      document.removeEventListener("touchstart", tryPlay);
+      document.removeEventListener("click", tryPlay);
+      document.removeEventListener("scroll", tryPlay);
+    };
+  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 bg-black">
       {/* Video Background */}
       <div className="absolute inset-0 z-0">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/video-backround.mp4" type="video/mp4" />
@@ -96,21 +122,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
-          className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-2"
-        >
-          <motion.div className="w-1.5 h-1.5 rounded-full bg-white/50" />
-        </motion.div>
-      </motion.div>
     </section>
   );
 }

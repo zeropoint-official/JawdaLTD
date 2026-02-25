@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: <Envelope size={20} weight="duotone" />,
     label: "Email",
-    value: "jawdaltd@gmail.com",
-    href: "mailto:jawdaltd@gmail.com",
+    value: "info@jawdaltd.com",
+    href: "mailto:info@jawdaltd.com",
   },
   {
     icon: <Phone size={20} weight="duotone" />,

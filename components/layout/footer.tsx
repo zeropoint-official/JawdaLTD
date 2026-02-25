@@ -81,8 +81,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-sm text-background/70">
                 <Envelope size={16} className="text-primary" />
-                <a href="mailto:jawdaltd@gmail.com" className="hover:text-primary transition-colors">
-                  jawdaltd@gmail.com
+                <a href="mailto:info@jawdaltd.com" className="hover:text-primary transition-colors">
+                  info@jawdaltd.com
                 </a>
               </li>
               <li className="flex items-center gap-3 text-sm text-background/70">

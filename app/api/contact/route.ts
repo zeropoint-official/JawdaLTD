@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const ADMIN_EMAIL = "akyriakouu@gmail.com";
+const ADMIN_EMAILS = ["akyriakouu@gmail.com", "info@jawdaltd.com"];
 const FROM_EMAIL = "Jawda LTD <noreply@zeropoint.company>";
 
 const SERVICE_LABELS: Record<string, string> = {
@@ -140,7 +140,7 @@ export async function POST(request: Request) {
       }),
       resend.emails.send({
         from: FROM_EMAIL,
-        to: ADMIN_EMAIL,
+        to: ADMIN_EMAILS,
         subject: `New enquiry from ${body.name}`,
         html: buildAdminNotificationEmail(body),
         replyTo: body.email,

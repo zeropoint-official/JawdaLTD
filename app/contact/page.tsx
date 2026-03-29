@@ -28,8 +28,8 @@ const contactInfo = [
   {
     icon: <Phone size={24} weight="duotone" />,
     label: "Phone",
-    value: "99766542",
-    href: "tel:99766542",
+    value: "97879668",
+    href: "tel:97879668",
     description: "Mon-Fri from 9am to 6pm",
   },
   {

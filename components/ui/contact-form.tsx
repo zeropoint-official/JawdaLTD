@@ -119,7 +119,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
               id="phone"
               name="phone"
               type="tel"
-              placeholder="99766542"
+              placeholder="97879668"
               className="h-11"
             />
           </div>

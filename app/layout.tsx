@@ -57,8 +57,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
-      <body className="font-sans antialiased overflow-x-hidden">{children}</body>
+    <html lang="en" className={`${inter.variable} ${dmSans.variable} overflow-x-clip`}>
+      <body className="font-sans antialiased overflow-x-clip">{children}</body>
     </html>
   );
 }

@@ -11,10 +11,20 @@ import {
   Buildings,
   Lightning,
   Fire,
+  Boat,
   ArrowRight,
 } from "@phosphor-icons/react";
 
 const services = [
+  {
+    icon: <Boat size={24} weight="duotone" className="text-cyan-500" />,
+    iconBg: "bg-cyan-500/10",
+    title: "Import & Export",
+    description:
+      "Worldwide import and export services — we source, ship, and deliver a wide range of goods on demand by sea, air, or land.",
+    link: "/services#import-export",
+    image: "https://images.unsplash.com/photo-1601897690942-bcacbad33e55?w=800&q=80",
+  },
   {
     icon: <Fire size={24} weight="duotone" className="text-red-500" />,
     iconBg: "bg-red-500/10",
@@ -64,7 +74,10 @@ export function ServicesPreview() {
 
       <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
         {services.map((service, index) => (
-          <StaggerItem key={index}>
+          <StaggerItem
+            key={index}
+            className={index === 0 ? "md:col-span-2" : ""}
+          >
             <Link href={service.link} className="block group">
               <motion.div
                 whileHover={{ y: -5 }}

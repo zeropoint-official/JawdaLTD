@@ -46,9 +46,55 @@ import {
   FireExtinguisher,
   Drop,
   Circle,
+  Boat,
+  AirplaneTilt,
+  Package,
+  GlobeHemisphereEast,
 } from "@phosphor-icons/react";
 
 const services = [
+  {
+    id: "import-export",
+    icon: <Boat size={32} weight="duotone" className="text-cyan-500" />,
+    iconBg: "bg-cyan-500/15",
+    iconColor: "text-cyan-500",
+    title: "Import & Export",
+    description:
+      "Worldwide import and export services covering a wide range of goods. We source, ship, and deliver on demand — by sea, air, or land — handling everything from procurement to final delivery.",
+    image: "https://images.unsplash.com/photo-1601897690942-bcacbad33e55?w=800&q=80",
+    features: [
+      {
+        icon: <Boat size={20} className="text-cyan-500" />,
+        title: "Sea Freight",
+        description: "Container shipping for bulk cargo worldwide",
+      },
+      {
+        icon: <AirplaneTilt size={20} className="text-cyan-500" />,
+        title: "Air Freight",
+        description: "Fast-track delivery for time-sensitive shipments",
+      },
+      {
+        icon: <GlobeHemisphereEast size={20} className="text-cyan-500" />,
+        title: "Global Sourcing",
+        description: "Trusted supplier network across global markets",
+      },
+      {
+        icon: <Package size={20} className="text-cyan-500" />,
+        title: "Custom Orders",
+        description: "Tailored procurement for any product on demand",
+      },
+      {
+        icon: <Certificate size={20} className="text-cyan-500" />,
+        title: "Customs Clearance",
+        description: "Full documentation and regulatory handling",
+      },
+      {
+        icon: <Warehouse size={20} className="text-cyan-500" />,
+        title: "End-to-End Logistics",
+        description: "Door-to-door coordination from origin to site",
+      },
+    ],
+  },
   {
     id: "fire-protection",
     icon: <Fire size={32} weight="duotone" className="text-red-500" />,
@@ -265,12 +311,6 @@ const services = [
 
 const additionalServices = [
   {
-    title: "Import-Export Materials",
-    description: "Building materials, industrial products, and special orders",
-    icon: <CheckCircle size={24} weight="fill" />,
-    iconBg: "bg-primary/10",
-  },
-  {
     title: "Project Management",
     description: "End-to-end project coordination and delivery",
     icon: <CheckCircle size={24} weight="fill" />,
@@ -452,7 +492,7 @@ export default function ServicesPage() {
             title="Additional Services"
             subtitle="Beyond our core offerings, we provide specialized services to meet your unique needs."
           />
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {additionalServices.map((service, index) => (
               <StaggerItem key={index}>
                 <MovingBorder

@@ -143,6 +143,7 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
           className="flex h-11 w-full rounded-4xl border border-border bg-input/30 px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
           <option value="">Select a service...</option>
+          <option value="import-export">Import & Export</option>
           <option value="fire-protection">Fire Protection</option>
           <option value="epoxy-products">Epoxy Products</option>
           <option value="construction">Construction & Maintenance</option>

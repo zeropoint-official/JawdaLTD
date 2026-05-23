@@ -7,6 +7,7 @@ const ADMIN_EMAILS = ["akyriakouu@gmail.com", "info@jawdaltd.com"];
 const FROM_EMAIL = "Jawda LTD <noreply@zeropoint.company>";
 
 const SERVICE_LABELS: Record<string, string> = {
+  "import-export": "Import & Export",
   "fire-protection": "Fire Protection",
   "epoxy-products": "Epoxy Products",
   construction: "Construction & Maintenance",
